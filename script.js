@@ -40,3 +40,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("heroVideo");
+  const unmuteBtn = document.getElementById("unmuteBtn");
+
+  // When user clicks the button → enable sound
+  unmuteBtn.addEventListener("click", () => {
+    video.muted = false;
+    video.play(); // ensure video restarts with sound
+    unmuteBtn.style.display = "none"; // hide button
+  });
+
+  // Optional: clicking the video also unmutes
+  video.addEventListener("click", () => {
+    video.muted = false;
+    video.play();
+    unmuteBtn.style.display = "none";
+  });
+});
