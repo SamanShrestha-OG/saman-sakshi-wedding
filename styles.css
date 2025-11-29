@@ -616,3 +616,177 @@ textarea {
     width: 100%;
   }
 }
+/* =========================================================
+   NEWARI × RAJASTHANI LUXURY WEDDING THEME — FULL OVERRIDE
+   ========================================================= */
+
+/* GLOBAL COLORS */
+:root {
+  --bg: #fff9f0;                 /* warm ivory */
+  --bg-alt: #f6eee4;              /* soft cream */
+  --text-main: #3a2b12;           /* deep brown-gold */
+  --text-light: #7a6b54;
+
+  /* cultural accents */
+  --accent-gold: #cba135;         /* Nepali Newar gold */
+  --accent-gold-dark: #a88324;
+  --accent-maroon: #7a1430;       /* Rajasthani/Marwadi maroon */
+  --accent-maroon-deep: #5c0f24;
+
+  --border-color: #e3cfb2;
+  --radius-card: 22px;
+
+  --shadow-soft: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+/* GLOBAL BACKGROUND */
+body {
+  background: radial-gradient(circle at top, #fffdf6, #fff6e8 55%, #fff9f0 100%);
+  color: var(--text-main);
+  font-family: "Open Sans", sans-serif;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--accent-maroon);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+.sub-nepali {
+  color: var(--accent-maroon);
+}
+
+.sub-hindi {
+  color: var(--accent-gold-dark);
+}
+
+/* NAVIGATION */
+.site-header {
+  background: rgba(255, 249, 240, 0.92);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+nav a {
+  color: var(--text-light);
+  letter-spacing: 0.2em;
+}
+
+nav a:hover {
+  color: var(--accent-maroon);
+}
+
+nav a::after {
+  background: linear-gradient(90deg, var(--accent-maroon), var(--accent-gold));
+}
+
+/* CARDS (EVENT DETAILS) */
+.card {
+  background: #fffaf4;
+  border-radius: var(--radius-card);
+  border: 2px solid var(--accent-gold);
+  box-shadow: var(--shadow-soft);
+  padding: 2rem;
+}
+
+.card h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--accent-maroon);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-gold), #e2c67d);
+  color: #3b2a0f;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-gold-dark);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+/* STORY BLOCKS */
+.story-block {
+  background: #fffaf4;
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.story-header {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--accent-maroon);
+  letter-spacing: 0.12em;
+}
+
+/* INVITATION BLOCK ENHANCED */
+.invitation-block {
+  background: #fff9f0;
+  border: 2px solid var(--accent-gold);
+  border-radius: 26px;
+  padding: 2.8rem 2.2rem;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  max-width: 720px;
+  margin: 3rem auto 0;
+}
+
+.invite-divider {
+  width: 110px;
+  height: 4px;
+  border-radius: 999px;
+  margin: 0 auto 1.4rem auto;
+  background: linear-gradient(90deg, var(--accent-maroon) 0%, var(--accent-gold) 60%, var(--accent-maroon) 100%);
+}
+
+.invite-script {
+  font-family: "Great Vibes", cursive;
+  color: var(--accent-maroon);
+  font-size: 2.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.invite-line {
+  font-family: "Playfair Display", serif;
+  color: #4a3d1c;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* PROPOSAL VIDEO */
+.proposal-video {
+  width: 50%;
+  max-width: 320px;
+  border-radius: 26px;
+  border: 3px solid var(--accent-gold);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+  margin: 2rem auto 0;
+  display: block;
+  object-fit: cover;
+}
