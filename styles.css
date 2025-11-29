@@ -393,3 +393,8 @@ textarea {
   background: rgba(0, 0, 0, 0.75);
   transform: translateY(-2px);
 }
+.story-video-full {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
