@@ -412,3 +412,32 @@ textarea {
   box-shadow: var(--shadow-soft);
   object-fit: cover;
 }
+.story-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.story-block {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--accent-gold);
+}
+
+.story-header {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  color: var(--accent-dark);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .story-split {
+    grid-template-columns: 1fr;
+  }
+}
