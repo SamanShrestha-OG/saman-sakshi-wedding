@@ -499,22 +499,48 @@ textarea {
 }
 
 /* Invitation card styling */
+/* Wedding-style invitation block */
 .invitation-block {
-  background: #fffdf7;
-  border: 1px solid var(--accent-gold);
-  border-radius: 18px;
-  padding: 1.6rem;
-  margin-top: 2.5rem;
+  background: #fffdf7;                       /* soft cream */
+  border: 1px solid var(--accent-gold);      /* gold border */
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  margin-top: 3rem;
   text-align: center;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);    /* soft shadow */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
+/* Gold divider line */
+.invite-divider {
+  width: 80px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 0 auto 1.2rem auto;
+  border-radius: 8px;
+}
+
+/* Script-style elegant font (headline) */
+.invite-script {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: var(--accent-dark);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Serif body lines */
 .invite-line {
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
   color: var(--accent-dark);
   margin: 0.5rem 0;
+  line-height: 1.6;
 }
+
 
 /* Video below */
 .proposal-video-container {
@@ -524,10 +550,13 @@ textarea {
 }
 
 .proposal-video {
-  width: 80%;
-  max-width: 500px;
-  border-radius: 18px;
-  box-shadow: var(--shadow-soft);
+  width: 55%;               /* smaller = more elegant */
+  max-width: 330px;
+  border-radius: 22px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  margin: 1.8rem auto 0 auto;
+  display: block;
+  border: 2px solid var(--accent-gold);   /* thin gold frame */
 }
 
 /* Mobile */
