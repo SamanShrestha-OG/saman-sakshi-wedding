@@ -83,7 +83,7 @@ nav a:hover {
 }
 .hero {
   position: relative;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,17 +103,8 @@ nav a:hover {
   z-index: -1;
 }
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(143, 191, 150, 0.45), /* sage tint */
-    rgba(85, 107, 78, 0.55)    /* deeper olive */
-  );
-  z-index: 0;
+  display: none;
 }
-
-
 
 .hero-content {
   position: relative;
