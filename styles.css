@@ -482,3 +482,61 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+/* Two-column layout */
+.story-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.story-block {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 18px;
+  border: 1px solid var(--accent-gold);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Invitation card styling */
+.invitation-block {
+  background: #fffdf7;
+  border: 1px solid var(--accent-gold);
+  border-radius: 18px;
+  padding: 1.6rem;
+  margin-top: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.invite-line {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--accent-dark);
+  margin: 0.5rem 0;
+}
+
+/* Video below */
+.proposal-video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.proposal-video {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .story-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .proposal-video {
+    width: 100%;
+  }
+}
