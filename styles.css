@@ -412,11 +412,19 @@ textarea {
   box-shadow: var(--shadow-soft);
   object-fit: cover;
 }
-.story-split {
+/* Two-column layout for Our Story */
+.story-two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
   gap: 2.5rem;
   margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.story-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
 .story-block {
@@ -429,10 +437,43 @@ textarea {
 
 .story-header {
   font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--accent-dark);
   margin-bottom: 1rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+}
+
+/* Right column video */
+.story-video-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.story-video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.story-video-small {
+  width: 80%;          /* adjust if you want smaller/bigger */
+  max-width: 400px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+/* Mobile: stack into one column */
+@media (max-width: 900px) {
+  .story-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .story-video-small {
+    width: 100%;
+    max-width: 460px;
+  }
 }
 
 /* MOBILE RESPONSIVE */
