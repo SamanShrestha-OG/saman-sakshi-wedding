@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saman & Partner | Wedding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wedding website for Saman & Partner. Details, schedule, and RSVP." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">Saman & Partner</div>
+      <nav>
+        <a href="#details">Details</a>
+        <a href="#story">Our Story</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">We're getting married</p>
+      <h1 class="hero-title">Saman & Partner</h1>
+      <p class="hero-date">Saturday · June 21, 2026 · Dallas, Texas</p>
+      <a href="#rsvp" class="btn-primary">RSVP Now</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- Details Section -->
+    <section class="section" id="details">
+      <div class="section-inner">
+        <h2 class="section-title">Wedding Details</h2>
+        <div class="details-grid">
+          <div class="card">
+            <h3>Ceremony</h3>
+            <p class="detail-strong">4:00 PM</p>
+            <p>Garden Lawn, Example Venue</p>
+            <p>1234 Wedding Lane<br />Dallas, TX</p>
+          </div>
+          <div class="card">
+            <h3>Reception</h3>
+            <p class="detail-strong">6:00 PM</p>
+            <p>Grand Hall, Example Venue</p>
+            <p>Dinner, drinks & dancing to follow.</p>
+          </div>
+          <div class="card">
+            <h3>Dress Code</h3>
+            <p class="detail-strong">Semi-formal</p>
+            <p>Think cocktail dresses and dress shirts with slacks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section section-alt" id="story">
+      <div class="section-inner story-layout">
+        <div>
+          <h2 class="section-title">Our Story</h2>
+          <p>
+            We met in 2018 over coffee in Dallas, and what started as a casual conversation
+            turned into late-night talks, weekend adventures, and a lot of laughter.
+          </p>
+          <p>
+            After years of growing together, we're so excited to celebrate this next chapter
+            with our favorite people. Thank you for being part of our story.
+          </p>
+        </div>
+        <div class="story-highlight">
+          <p class="story-date">Engaged on</p>
+          <p class="story-big">December 10, 2024</p>
+          <p>Dallas Arboretum · She said “yes” under the lights.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section" id="rsvp">
+      <div class="section-inner">
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-intro">
+          Please RSVP by <strong>May 15, 2026</strong>.  
+          We can’t wait to celebrate with you!
+        </p>
+
+        <form id="rsvpForm" class="rsvp-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="attending">Will you attend? *</label>
+              <select id="attending" name="attending" required>
+                <option value="">Select one</option>
+                <option value="Yes">Yes, wouldn’t miss it!</option>
+                <option value="No">Sadly, can’t make it</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="guestCount">Number of guests (including you) *</label>
+              <input type="number" id="guestCount" name="guestCount" min="1" max="10" required />
+            </div>
+            <div class="form-group">
+              <label for="mealChoice">Meal Preference (if applicable)</label>
+              <select id="mealChoice" name="mealChoice">
+                <option value="">No preference / Not applicable</option>
+                <option value="Chicken">Chicken</option>
+                <option value="Beef">Beef</option>
+                <option value="Fish">Fish</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dietaryRestrictions">Dietary restrictions</label>
+            <input type="text" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="Allergies, vegetarian, etc." />
+          </div>
+
+          <div class="form-group">
+            <label for="songRequest">Song request for the dance floor</label>
+            <input type="text" id="songRequest" name="songRequest" placeholder="Title & artist" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message for the couple</label>
+            <textarea id="message" name="message" rows="3" placeholder="Optional"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Submit RSVP</button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>With love, Saman & Partner</p>
+      <p class="footer-sub">See you in Dallas ✨</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
