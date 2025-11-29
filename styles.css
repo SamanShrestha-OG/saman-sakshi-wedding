@@ -84,16 +84,38 @@ nav a:hover {
   background-size: cover;
   background-position: center;
 }
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(143, 191, 150, 0.45),  /* sage tint */
-    rgba(85, 107, 78, 0.55)     /* deep olive */
+    rgba(143, 191, 150, 0.45), /* sage tint */
+    rgba(85, 107, 78, 0.55)    /* deeper olive */
   );
+  z-index: 0;
 }
+
 
 
 .hero-content {
@@ -121,6 +143,7 @@ nav a:hover {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
+
 
 /* Buttons */
 
