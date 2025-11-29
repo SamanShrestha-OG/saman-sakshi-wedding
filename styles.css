@@ -80,9 +80,6 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  background-image: url("https://images.pexels.com/photos/3951603/pexels-photo-3951603.jpeg");
-  background-size: cover;
-  background-position: center;
 }
 .hero {
   position: relative;
