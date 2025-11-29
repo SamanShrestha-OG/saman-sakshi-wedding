@@ -398,3 +398,17 @@ textarea {
   border-radius: 18px;
   box-shadow: var(--shadow-soft);
 }
+.story-video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-video-small {
+  width: 80%;                 /* Adjust size: try 70%, 60%, etc. */
+  max-width: 400px;           /* Hard cap the size */
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
