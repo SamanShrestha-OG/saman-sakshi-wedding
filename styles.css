@@ -433,60 +433,150 @@ textarea {
     width: 80%;
   }
 }
-/* ===== AUTO-SCROLLING PHOTO STRIP ===== */
+/* ========== CINEMATIC PARALLAX PHOTO WALL ========== */
 
-.photo-strip-wrapper {
-  margin-top: 3rem;
-  overflow: hidden;
-  width: 100%;
+.photo-wall {
   position: relative;
-  padding: 1rem 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 3.5rem 0 4.5rem;
+  margin-top: 3rem;
 }
 
-.photo-strip {
-  display: flex;
+/* Soft vignette / fade at edges */
+.photo-wall::before,
+.photo-wall::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.photo-wall::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+}
+
+.photo-wall::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, transparent 100%);
+}
+
+/* Subtle mandala / jharokha-ish background aura (no extra file needed) */
+.photo-wall::backdrop;
+.photo-wall-bg {
+  display: none;
+}
+
+/* Layers */
+
+.photo-wall-layer {
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  gap: 1.2rem;
-  animation: scrollStrip 35s linear infinite;
+  gap: 1.4rem;
+  padding-left: 2rem;
+  will-change: transform;
 }
 
-.photo-strip img {
-  height: 220px;                /* varied collage size */
+/* Back layer – slowest */
+.layer-back {
+  animation: wallBack 70s linear infinite;
+  opacity: 0.75;
+}
+
+/* Mid layer */
+.layer-mid {
+  margin-top: 1.4rem;
+  animation: wallMid 50s linear infinite;
+  opacity: 0.9;
+}
+
+/* Front layer – fastest and brightest */
+.layer-front {
+  margin-top: 1.8rem;
+  animation: wallFront 35s linear infinite;
+}
+
+/* Hover anywhere on wall pauses all layers */
+.photo-wall:hover .photo-wall-layer {
+  animation-play-state: paused;
+}
+
+/* Image styling */
+
+.photo-wall-layer img {
+  height: 210px;
   width: auto;
-  border-radius: 18px;
-  border: 2px solid var(--accent-gold);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
   object-fit: cover;
+  border-radius: 22px;
+  background: #fffdf8;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+  transform-origin: center center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Larger + smaller random sizes for collage vibe */
-.photo-strip img:nth-child(3n) {
-  height: 260px;
+/* Random-ish collage sizing */
+.photo-wall-layer img:nth-child(3n) {
+  height: 250px;
 }
-.photo-strip img:nth-child(4n) {
-  height: 180px;
+.photo-wall-layer img:nth-child(4n) {
+  height: 190px;
 }
-.photo-strip img:nth-child(5n) {
+.photo-wall-layer img:nth-child(5n) {
   height: 230px;
 }
 
-/* Animation */
-@keyframes scrollStrip {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Slight tilt for that “film contact sheet” vibe */
+.layer-back  img:nth-child(odd) { transform: rotate(-2deg); }
+.layer-back  img:nth-child(even) { transform: rotate(1.5deg); }
+
+.layer-mid   img:nth-child(odd) { transform: rotate(2deg); }
+.layer-mid   img:nth-child(even) { transform: rotate(-1.5deg); }
+
+.layer-front img:nth-child(odd) { transform: rotate(-1deg); }
+.layer-front img:nth-child(even) { transform: rotate(1deg); }
+
+/* Hover highlight – straighten + zoom + stronger glow */
+.photo-wall-layer img:hover {
+  transform: scale(1.08) rotate(0deg);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+  border-color: var(--accent-maroon);
+  z-index: 10;
 }
 
-/* Duplicate strip for infinite looping */
-.photo-strip-wrapper::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1rem;
-  width: 200%;
-  height: 100%;
-  background-repeat: repeat-x;
+/* Parallax scroll speeds */
+
+@keyframes wallBack {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-55%); }
+}
+
+@keyframes wallMid {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-70%); }
+}
+
+@keyframes wallFront {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-85%); }
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px) {
+  .photo-wall {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .photo-wall-layer img {
+    height: 180px;
+  }
+
+  .photo-wall-layer img:nth-child(3n) {
+    height: 210px;
+  }
 }
