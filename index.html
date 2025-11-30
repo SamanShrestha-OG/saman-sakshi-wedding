@@ -4,20 +4,24 @@
   <meta charset="UTF-8" />
   <title>Sakshi & Saman | Wedding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Wedding website for Saman & Partner. Details, schedule, and RSVP." />
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Mulish:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- HEADER / NAV -->
   <header class="site-header">
     <div class="nav-container">
-      <div class="logo">Sakshi & Saman</div>
+      <div class="logo">
+        S &amp; S
+      </div>
       <nav>
         <a href="#details">Details</a>
         <a href="#story">Our Story</a>
@@ -26,232 +30,243 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-<section class="hero" id="home">
-  <video autoplay loop muted playsinline class="hero-video">
-    <source src="videos/wedding.mp4" type="video/mp4" />
-  </video>
-
-  <div class="hero-overlay"></div>
-</section>
-
-
   <main>
-    <!-- Details Section -->
-<section class="section" id="details">
-  <div class="section-inner">
-    <h2 class="section-title">Event Details</h2>
-      <p class="section-subtitle">
-  <span class="sub-nepali">बिवाहको विवरण</span> ·
-  <span class="sub-hindi">शादी विवरण</span>
-</p>
-
-    <div class="details-grid">
-      <div class="card">
-        <h3>Date</h3>
-        <p class="detail-strong">March 11, 2026</p>
-        <p>Dallas, Texas (Exact venue coming soon)</p>
-      </div>
-
-      <div class="card">
-        <h3>Celebration</h3>
-        <p class="detail-strong">Evening Reception</p>
-        <p>Join us for food, music, and celebration.</p>
-        <p>More details to be announced soon.</p>
-      </div>
-
-      <div class="card">
-        <h3>RSVP</h3>
-        <p class="detail-strong">Please Respond</p>
-        <p>Kindly let us know if you'll be joining us.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- Story Section -->
-<section class="section" id="story">
-  <div class="section-inner">
-    <h2 class="section-title">Our Story</h2>
-<p class="section-subtitle">
-  <span class="sub-nepali">हाम्रो कथा</span> ·
-  <span class="sub-hindi">हमारी कहानी</span>
-</p>
-
-    <!-- TWO COLUMN HIS & HER -->
-    <div class="story-two-col">
-      <!-- HIS -->
-      <div class="story-block">
-        <h3 class="story-header">His Side — Saman</h3>
-        <p>
-          September 2021. Our best friends were in the middle of a dramatic breakup — the kind with
-          season-finale energy — while I was just trying to mind my business.
-        </p>
-        <p>
-          Then I saw <strong>her</strong>. My brain shut down and rebooted with one thought:
-          <strong>“Damn!! Ckwaaak.”</strong> Don’t ask me why — my heart spoke first.
-        </p>
-        <p>
-          I came to listen to my friend vent. Instead, I saw Sakshi and instantly forgot who I was.
-          My posture straightened, my voice got deeper, and suddenly I was saying things like
-          “Yeah, I’ve been going to the gym.” (I definitely was not.)
-        </p>
-        <p>
-          Her laugh hooked me instantly. She was funny, chaotic, calm, dramatic, and gorgeous all at once —
-          a walking plot twist — and I was done for.
-        </p>
-        <p>
-          If our story were a movie, this is where music swells and everyone whispers,
-          <strong>“Ugh… they’re so cute.”</strong>
-        </p>
-        <p>
-          And they’d be right — because somehow, against all odds and all zip codes, we found our happily-ever-after anyway.
-        </p>
-      </div>
-
-      <!-- HER -->
-      <div class="story-block">
-        <h3 class="story-header">Her Side — Sakshi</h3>
-        <p>
-          What was supposed to be a simple 2021 getaway turned into destiny doing its thing —
-          messy but efficient.
-        </p>
-        <p>
-          At that time, I was living everywhere:
-          <strong>New Jersey → New York → Austin → Pocatello</strong>.
-          Basically a full-time nomad collecting zip codes.
-        </p>
-        <p>
-          Then came Dallas. Not for the weather, or the traffic,
-          or the heat trying to roast me alive… but for Saman.
-        </p>
-        <p>
-          He made the chaos softer, the moments sweeter, the days brighter.
-          Home stopped being a place. It became a person.
-        </p>
-        <p>
-          I wasn’t looking for love — but then he said “Hey,” and everything shifted.
-        </p>
-        <p>
-          And after all the moving and all the miles, I finally stopped running…
-          because I found where I’m meant to stay.
-        </p>
-      </div>
-    </div>
-
-    <!-- INVITATION STYLE STORY BLOCK -->
- <div class="invitation-block">
-  <div class="invite-divider"></div>
-
-  <p class="invite-line invite-script">
-    A journey that started with chaos, laughter, and one unforgettable “Ckwaaak.”
-  </p>
-
-  <p class="invite-line">
-    Two hearts, many cities, and one beautiful destination.
-  </p>
-
-  <p class="invite-line">
-    We can’t wait to celebrate this love story with you.
-  </p>
-</div>
-
-    <!-- VIDEO BELOW -->
-    <div class="proposal-video-container">
-      <video autoplay loop muted playsinline class="proposal-video">
-        <source src="videos/proposal.mp4" type="video/mp4" />
+    <!-- HERO: VIDEO + TEXT BELOW (no tint on video) -->
+    <section class="hero" id="home">
+      <video autoplay loop muted playsinline class="hero-video">
+        <!-- update path if your file is different -->
+        <source src="videos/wedding.mp4" type="video/mp4" />
       </video>
-    </div>
-
-  </div>
-</section>
-
-
-
-    <!-- RSVP Section -->
-    <section class="section" id="rsvp">
-      <p class="section-subtitle">
-  <span class="sub-nepali">निमन्त्रण</span> ·
-  <span class="sub-hindi">निमंत्रण</span>
-</p>
-
-      <div class="section-inner">
-       <h2 class="section-title">RSVP</h2>
-<p class="section-intro">We would be honored to have you celebrate with us.</p>
-        <form id="rsvpForm" class="rsvp-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Full Name *</label>
-              <input type="text" id="fullName" name="fullName" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone (optional)</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="attending">Will you attend? *</label>
-              <select id="attending" name="attending" required>
-                <option value="">Select one</option>
-                <option value="Yes">Yes, wouldn’t miss it!</option>
-                <option value="No">Sadly, can’t make it</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="guestCount">Number of guests (including you) *</label>
-              <input type="number" id="guestCount" name="guestCount" min="1" max="10" required />
-            </div>
-            <div class="form-group">
-              <label for="mealChoice">Meal Preference (if applicable)</label>
-              <select id="mealChoice" name="mealChoice">
-                <option value="">No preference / Not applicable</option>
-                <option value="Chicken">Chicken</option>
-                <option value="Beef">Beef</option>
-                <option value="Fish">Fish</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="Vegan">Vegan</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="dietaryRestrictions">Dietary restrictions</label>
-            <input type="text" id="dietaryRestrictions" name="dietaryRestrictions" placeholder="Allergies, vegetarian, etc." />
-          </div>
-
-          <div class="form-group">
-            <label for="songRequest">Song request for the dance floor</label>
-            <input type="text" id="songRequest" name="songRequest" placeholder="Title & artist" />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message for the couple</label>
-            <textarea id="message" name="message" rows="3" placeholder="Optional"></textarea>
-          </div>
-
-          <button type="submit" class="btn-primary">Submit RSVP</button>
-          <p id="formStatus" class="form-status"></p>
-        </form>
+      <div class="hero-bottom">
+        <p class="hero-sub">
+          हाम्रो उत्सव · हमारा उत्सव
+        </p>
+        <h1 class="hero-title">
+          Sakshi &amp; Saman
+        </h1>
+        <p class="hero-meta">
+          March 11, 2026 &middot; Dallas, Texas
+        </p>
+        <a href="#rsvp" class="btn-primary hero-btn">RSVP</a>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <p>With love, Saman & Partner</p>
-      <p class="footer-sub">See you in Dallas ✨</p>
-    </footer>
+    <!-- EVENT DETAILS -->
+    <section class="section" id="details">
+      <div class="section-inner">
+        <h2 class="section-title">Event Details</h2>
+        <p class="section-subtitle">
+          <span class="sub-nepali">बिवाहको उत्सव</span> ·
+          <span class="sub-hindi">शादी का जश्न</span>
+        </p>
+
+        <div class="details-grid">
+          <div class="card">
+            <h3>Date</h3>
+            <p class="detail-strong">March 11, 2026</p>
+            <p>Wednesday evening celebration with our favorite people.</p>
+          </div>
+
+          <div class="card">
+            <h3>Location</h3>
+            <p class="detail-strong">Dallas, Texas</p>
+            <p>Final venue details coming soon. We’re finding the perfect spot.</p>
+          </div>
+
+          <div class="card">
+            <h3>Dress Code</h3>
+            <p class="detail-strong">South Asian Festive</p>
+            <p>
+              Sarees, lehengas, kurtas, suits, or anything that makes you feel ready
+              to dance and feast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY + INVITATION + PROPOSAL VIDEO -->
+    <section class="section" id="story">
+      <div class="section-inner">
+        <h2 class="section-title">Our Story</h2>
+        <p class="section-subtitle">
+          <span class="sub-nepali">हाम्रो कथा</span> ·
+          <span class="sub-hindi">हमारी कहानी</span>
+        </p>
+
+        <!-- HIS / HER SIDE BY SIDE -->
+        <div class="story-two-col">
+          <div class="story-block">
+            <h3 class="story-header">His Side — Saman</h3>
+            <p>
+              September 2021. Our best friends were in the middle of a dramatic breakup — the kind with
+              season-finale energy — while I was just trying to mind my business.
+            </p>
+            <p>
+              Then I saw <strong>her</strong>. My brain shut down and rebooted with one thought:
+              <strong>“Damn!! Ckwaaak.”</strong> Don’t ask me why — my heart spoke first.
+            </p>
+            <p>
+              I came to listen to my friend vent. Instead, I saw Sakshi and instantly forgot who I was.
+              My posture straightened, my voice got deeper, and suddenly I was saying things like
+              “Yeah, I’ve been going to the gym.” (I definitely was not.)
+            </p>
+            <p>
+              Her laugh hooked me instantly. She was funny, chaotic, calm, dramatic, and gorgeous all at once —
+              a walking plot twist — and I was done for.
+            </p>
+            <p>
+              And now, after all the twists, airport goodbyes, random city moves, dramatic friend breakups,
+              and one unforgettable “Ckwaaak” moment… here we are, about to start forever.
+            </p>
+            <p>
+              If our story were a movie, this is where music swells and everyone whispers,
+              <strong>“Ugh… they’re so cute.”</strong> And they’d be right — because somehow, against all odds
+              and all zip codes, we found our happily-ever-after anyway.
+            </p>
+          </div>
+
+          <div class="story-block">
+            <h3 class="story-header">Her Side — Sakshi</h3>
+            <p>
+              What was supposed to be a simple 2021 getaway turned into destiny doing its thing — messy but
+              efficient.
+            </p>
+            <p>
+              At that time, I was living everywhere:
+              <strong>New Jersey → New York → Austin → Pocatello</strong>. Basically a full-time nomad
+              collecting zip codes.
+            </p>
+            <p>
+              Then came Dallas. Not for the weather, or the traffic, or the heat trying to roast me alive…
+              but for Saman.
+            </p>
+            <p>
+              He made the chaos softer, the moments sweeter, the days brighter. Home stopped being a place.
+              It became a person.
+            </p>
+            <p>
+              I wasn’t looking for love — but then he said “Hey,” and everything shifted.
+            </p>
+            <p>
+              And after all the moving and all the miles, I finally stopped running… because I found where
+              I’m meant to stay.
+            </p>
+          </div>
+        </div>
+
+        <!-- INVITATION STYLE BLOCK -->
+        <div class="invitation-block">
+          <div class="invite-divider"></div>
+          <p class="invite-script">
+            A journey from Kathmandu &amp; Rajasthan to one celebration in Dallas.
+          </p>
+          <p class="invite-line">
+            A story that started with chaos, laughter, and one unforgettable “Ckwaaak.”
+          </p>
+          <p class="invite-line">
+            Two hearts, many cities, and one beautiful destination.
+          </p>
+          <p class="invite-line">
+            We can’t wait to celebrate this love story with you.
+          </p>
+        </div>
+
+        <!-- PROPOSAL VIDEO BELOW INVITE -->
+        <div class="proposal-video-container">
+          <video autoplay loop muted playsinline class="proposal-video">
+            <!-- update path if needed -->
+            <source src="videos/proposal.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section" id="rsvp">
+      <div class="section-inner">
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-subtitle">
+          <span class="sub-nepali">निमन्त्रण</span> ·
+          <span class="sub-hindi">निमंत्रण</span>
+        </p>
+        <p class="section-intro">
+          We would be honored to have you celebrate with us on March 11, 2026.
+        </p>
+
+        <form class="rsvp-form">
+          <div class="form-row">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="form-row">
+            <label for="attend">Will you attend? *</label>
+            <select id="attend" name="attend" required>
+              <option value="">Select one</option>
+              <option value="yes">Yes, wouldn’t miss it!</option>
+              <option value="no">Sadly, can’t make it</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="guests">Number of guests (including you) *</label>
+            <input type="number" id="guests" name="guests" min="1" required />
+          </div>
+
+          <div class="form-row">
+            <label for="meal">Meal Preference (if applicable)</label>
+            <select id="meal" name="meal">
+              <option value="">No preference / Not applicable</option>
+              <option value="chicken">Chicken</option>
+              <option value="beef">Beef</option>
+              <option value="fish">Fish</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="diet">Dietary restrictions</label>
+            <textarea id="diet" name="diet" rows="2"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="song">Song request for the dance floor</label>
+            <input type="text" id="song" name="song" />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message for the couple</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Submit RSVP</button>
+          </div>
+        </form>
+
+        <p class="section-intro small-intro">
+          From a Newar heart and a Marwadi soul, to one big celebration with you in Dallas.
+        </p>
+      </div>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Made with love — A Newar × Marwadi Story</p>
+    <p>Sakshi &amp; Saman · March 11, 2026</p>
+  </footer>
 </body>
 </html>
