@@ -433,3 +433,60 @@ textarea {
     width: 80%;
   }
 }
+/* ===== AUTO-SCROLLING PHOTO STRIP ===== */
+
+.photo-strip-wrapper {
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.photo-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  animation: scrollStrip 35s linear infinite;
+}
+
+.photo-strip img {
+  height: 220px;                /* varied collage size */
+  width: auto;
+  border-radius: 18px;
+  border: 2px solid var(--accent-gold);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+/* Larger + smaller random sizes for collage vibe */
+.photo-strip img:nth-child(3n) {
+  height: 260px;
+}
+.photo-strip img:nth-child(4n) {
+  height: 180px;
+}
+.photo-strip img:nth-child(5n) {
+  height: 230px;
+}
+
+/* Animation */
+@keyframes scrollStrip {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Duplicate strip for infinite looping */
+.photo-strip-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+}
