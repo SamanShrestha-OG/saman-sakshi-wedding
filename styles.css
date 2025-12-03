@@ -110,18 +110,15 @@ nav a:hover::after {
 }
 
 .hero-bottom {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  padding: 1.8rem 1.5rem 2.4rem;
-  background: linear-gradient(
-    to top,
-    rgba(255, 249, 240, 0.95),
-    rgba(255, 249, 240, 0.7),
-    transparent
-  );
+  position: absolute;
+  bottom: 4%;     /* ← LOWER the text on video */
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  width: 100%;
+  z-index: 5;
 }
+
 
 .hero-sub {
   font-family: "Cormorant Garamond", serif;
