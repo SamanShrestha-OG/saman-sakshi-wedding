@@ -121,7 +121,7 @@ nav a:hover::after {
     transparent
   );
   text-align: center;
-  margin-top: 18rem;   /* ← moves the text LOWER */
+  margin-top: 24rem;   /* ← moves the text LOWER */
 
 }
 
