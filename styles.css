@@ -104,7 +104,7 @@ nav a:hover::after {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 92vh;
   object-fit: cover;
   z-index: -1;
 }
@@ -121,7 +121,7 @@ nav a:hover::after {
     transparent
   );
   text-align: center;
-  margin-top: 24rem;   /* ← moves the text LOWER */
+  margin-top: -3rem;   /* ← moves the text LOWER */
 
 }
 
