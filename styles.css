@@ -597,3 +597,15 @@ textarea {
     height: 210px;
   }
 }
+/* --- MOBILE HERO VIDEO FIX --- */
+@media (max-width: 768px) {
+  .hero-video {
+    height: 75vh !important;   /* smaller height so it fits on phones */
+    object-fit: cover;
+  }
+
+  .hero-bottom {
+    bottom: 8%;                /* adjust text to match smaller video */
+    padding: 1.1rem 1rem 1.6rem;
+  }
+}
