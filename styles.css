@@ -93,7 +93,7 @@ nav a:hover::after {
 
 .hero {
   position: relative;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -104,27 +104,42 @@ nav a:hover::after {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
 }
 
 .hero-bottom {
-  position: relative;
+  position: absolute;
+  bottom: 2%;                     /* ← VERY bottom of the video */
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
-  padding: 1.8rem 1.5rem 2.4rem;
+
+  text-align: center;
+  padding: 1.5rem 1.5rem 2rem;
+
+  /* floating gradient to make text readable */
   background: linear-gradient(
     to top,
-    rgba(255, 249, 240, 0.95),
-    rgba(255, 249, 240, 0.7),
+    rgba(255, 249, 240, 0.92),     /* soft ivory gold */
+    rgba(255, 249, 240, 0.45),
+    rgba(255, 249, 240, 0.15),
     transparent
   );
-  text-align: center;
-  margin-top: 24rem;   /* ← moves the text LOWER */
 
+  border-radius: 16px;
+  backdrop-filter: blur(2px);      /* slight glassy feel */
+  z-index: 5;
 }
 
+@media (max-width: 768px) {
+  .hero-bottom {
+    bottom: 4%;    /* lift it slightly so it doesn’t get cut off */
+    padding: 1.2rem 1rem 1.8rem;
+  }
+}
 .hero-sub {
   font-family: "Cormorant Garamond", serif;
   font-size: 0.9rem;
