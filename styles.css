@@ -915,3 +915,80 @@ textarea {
     height: 60px;
   }
 }
+/* ================================================
+   MINIMAL MANDALA LUXURY EVENT DETAILS
+   ================================================ */
+
+.event-details-mandala {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-block {
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Mandala icon at the top */
+.mandala-icon {
+  width: 60px;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.15));
+}
+
+/* Titles */
+.event-block h3 {
+  margin: 0.4rem 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-maroon);
+}
+
+/* Main detail */
+.event-main {
+  margin: 0.3rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-maroon-deep);
+}
+
+/* Subtext */
+.event-sub {
+  margin: 0.4rem 0 0;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Gold divider between blocks */
+.event-block:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  margin: 2rem auto 0;
+  background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+  opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mandala-icon {
+    width: 48px;
+  }
+  .event-block h3 {
+    font-size: 1.4rem;
+  }
+  .event-main {
+    font-size: 1.2rem;
+  }
+}
