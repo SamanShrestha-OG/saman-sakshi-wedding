@@ -1,179 +1,315 @@
-/* ===========================
-   GLOBAL STYLES
-=========================== */
-
+/* BASE
+   -------------------------------------------------- */
 :root {
-  --soft-rose: #f9f4f2;
-  --text-dark: #2a2a2a;
-  --text-light: #6a6a6a;
-  --accent: #c8a27d; /* soft romantic gold */
+  --bg: #fdf9f6;
+  --bg-soft: #f9f1ec;
+  --accent-soft: #f3d6d7;
+  --accent-rose: #b45a68;
+  --accent-gold: #d4b28c;
+  --text-main: #3a2a29;
+  --text-light: #7a6260;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  background: var(--soft-rose);
-  font-family: "Inter", sans-serif;
-  color: var(--text-dark);
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
 }
 
-h1, h2, h3 {
-  margin: 0;
+/* HEADER
+   -------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background: rgba(253, 249, 246, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 178, 140, 0.25);
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.logo-mark {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4rem;
+  color: var(--accent-rose);
+}
+
+.nav a {
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-light);
+}
+
+.nav a:hover {
+  color: var(--accent-rose);
+}
+
+/* HERO
+   -------------------------------------------------- */
 .hero {
   position: relative;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
+  background: #000;
 }
 
+/* Video full screen */
 .hero-video {
   position: absolute;
-  top: 0; left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
+/* Overlay that pins text to the bottom inside the video */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0));
-  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1.5rem 3.5rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
 }
 
-/* TEXT AT BOTTOM OF VIDEO */
-.hero-bottom {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+.hero-text {
   text-align: center;
-  z-index: 3;
+  color: #fff;
+  max-width: 600px;
+}
+
+.hero-tagline {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 .hero-names {
+  margin: 0;
   font-family: "Dancing Script", cursive;
-  color: white;
   font-size: 3rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.4rem;
-}
-
-.hero-date {
-  color: #f7f7f7;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background: white;
-  border-radius: 30px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 0.9rem;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: var(--accent);
-  color: white;
+.hero-meta {
+  margin: 0.3rem 0 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
+.btn-primary {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  background: #ffffff;
+  color: var(--accent-rose);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
 
-/* ===========================
-   EVENT SECTION
-=========================== */
+.btn-primary:hover {
+  background: var(--accent-rose);
+  color: #fffdf8;
+}
 
-.event-section {
-  padding: 4rem 1.5rem;
-  text-align: center;
+/* MAIN SECTIONS
+   -------------------------------------------------- */
+.section {
+  padding: 6rem 1.5rem 4rem;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  margin-bottom: 2.5rem;
-  letter-spacing: 1px;
+  margin: 0 0 0.6rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  color: var(--accent-rose);
 }
 
-.event-block {
-  margin-bottom: 3rem;
+.section-intro {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 650px;
+  color: var(--text-light);
+  line-height: 1.7;
 }
 
-.event-block h3 {
-  font-size: 1.3rem;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 0.3rem;
+.section-sub {
+  margin: 0.2rem 0 2.5rem;
+  text-align: center;
+  color: var(--text-light);
 }
 
-.event-main {
-  font-size: 1.15rem;
+/* EVENT DETAILS – OPTION 1 (invitation style)
+   -------------------------------------------------- */
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  column-gap: 2rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(212, 178, 140, 0.4);
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.detail-main {
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
+  color: var(--accent-rose);
 }
 
-.event-sub {
+.detail-sub {
+  font-size: 0.95rem;
   color: var(--text-light);
   line-height: 1.6;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
-
-/* ===========================
-   RSVP SECTION
-=========================== */
-
-.rsvp-section {
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
+/* RSVP
+   -------------------------------------------------- */
 .rsvp-form {
-  max-width: 450px;
+  max-width: 550px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-textarea {
-  height: 100px;
-}
-
-.submit-btn {
-  background: var(--accent);
-  color: white;
-}
-
-
-/* ===========================
-   FOOTER
-=========================== */
-
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
+.form-row label {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-light);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  border-radius: 999px;
+  border: 1px solid rgba(212, 178, 140, 0.5);
+  padding: 0.7rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+}
+
+.form-row textarea {
+  border-radius: 18px;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: var(--accent-rose);
+}
+
+.rsvp-note {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* FOOTER
+   -------------------------------------------------- */
+.site-footer {
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
   font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* RESPONSIVE
+   -------------------------------------------------- */
+@media (max-width: 900px) {
+  .detail-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.4rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-overlay {
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-names {
+    font-size: 2.4rem;
+  }
+
+  .section {
+    padding-top: 4.5rem;
+  }
 }
