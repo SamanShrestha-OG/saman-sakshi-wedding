@@ -1,112 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi & Saman – Wedding Celebration</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sakshi &amp; Saman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <!-- Optional: replace with your video -->
+      <!-- Put your file at /videos/hero.mp4 -->
+      <video
+        class="hero-video"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="videos/wedding.mp4" type="video/mp4" />
+      </video>
 
-  <!-- HEADER -->
-  <header class="nav">
-    <div class="nav-left">S + S</div>
-    <nav class="nav-right">
-      <a href="#home">Home</a>
-      <a href="#details">Details</a>
-      <a href="#story">Our Story</a>
-      <a href="#rsvp">RSVP</a>
-    </nav>
-  </header>
+      <div class="hero-overlay"></div>
 
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <video autoplay loop muted playsinline class="hero-video">
-      <source src="videos/wedding.mp4" type="video/mp4" />
-    </video>
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-text">
-      <h1>Sakshi & Saman</h1>
-      <p class="hero-date">March 11, 2026 · Dallas, Texas</p>
-    </div>
-  </section>
-
-
-  <!-- EVENT DETAILS — E3C-C minimal romantic -->
-  <section id="details" class="details">
-    <h2 class="section-title">Event Details</h2>
-
-    <div class="detail-grid">
-
-      <!-- DATE -->
-      <div class="detail-card">
-        <img src="assets/mandala-thin.png" class="detail-icon" alt="">
-        <h3>Date</h3>
-        <p class="detail-main">March 11, 2026</p>
-        <p class="detail-sub">A romantic evening celebration with our loved ones.</p>
+      <div class="hero-inner">
+        <p class="hero-tagline">A modern celebration of love</p>
+        <h1 class="hero-names">Sakshi &amp; Saman</h1>
+        <p class="hero-meta">March 11, 2026 · Dallas, Texas</p>
+        <a href="#rsvp" class="hero-btn">RSVP</a>
       </div>
+    </header>
 
-      <!-- VENUE -->
-      <div class="detail-card">
-        <img src="assets/mandala-thin.png" class="detail-icon" alt="">
-        <h3>Venue</h3>
-        <p class="detail-main">Dallas, Texas</p>
-        <p class="detail-sub">Final venue will be announced soon.</p>
+    <main>
+      <!-- INTRO -->
+      <section class="section section-intro">
+        <div class="shell">
+          <p class="eyebrow">Welcome</p>
+          <h2 class="section-title">We can’t wait to celebrate with you</h2>
+          <p class="section-text">
+            What started as chaos and timing gone wrong somehow turned into
+            the best kind of right. We’re so excited to bring our favorite
+            people together for one joyful, cozy, slightly chaotic evening
+            full of food, music, and love.
+          </p>
+        </div>
+      </section>
+
+      <!-- EVENT DETAILS – OPTION 1 (INVITATION STYLE) -->
+      <section class="section section-details" id="details">
+        <div class="shell">
+          <p class="eyebrow">Event Details</p>
+          <h2 class="section-title">The Evening</h2>
+
+          <div class="details-list">
+            <!-- Date -->
+            <div class="detail-item">
+              <div class="detail-label">Date</div>
+              <div class="detail-content">
+                <div class="detail-main">Wednesday · March 11, 2026</div>
+                <div class="detail-sub">Evening reception with friends & family.</div>
+              </div>
+            </div>
+
+            <!-- Time -->
+            <div class="detail-item">
+              <div class="detail-label">Time</div>
+              <div class="detail-content">
+                <div class="detail-main">TBA</div>
+                <div class="detail-sub">
+                  Final timing to follow — expect an evening start with dinner, dancing, and stories.
+                </div>
+              </div>
+            </div>
+
+            <!-- Venue -->
+            <div class="detail-item">
+              <div class="detail-label">Venue</div>
+              <div class="detail-content">
+                <div class="detail-main">Dallas, Texas</div>
+                <div class="detail-sub">
+                  We’re finalizing the perfect place. Venue details and parking info will be updated here.
+                </div>
+              </div>
+            </div>
+
+            <!-- Dress code -->
+            <div class="detail-item">
+              <div class="detail-label">Dress Code</div>
+              <div class="detail-content">
+                <div class="detail-main">Modern South Asian Festive</div>
+                <div class="detail-sub">
+                  Think elegant & comfortable — lehengas, sarees, kurtas, suits, or your favorite dressed-up look.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY -->
+      <section class="section section-story" id="story">
+        <div class="shell">
+          <p class="eyebrow">Our Story</p>
+          <h2 class="section-title">How we got here</h2>
+
+          <div class="story-grid">
+            <div class="story-block">
+              <h3>His side</h3>
+              <p>
+                September 2021. While our best friends were very dramatically
+                breaking up, I saw her and my brain went: “...damn. Ckwaak.”
+              </p>
+              <p>
+                What was supposed to be a normal hang turned into late-night
+                drives, too much chai, and somehow, me accidentally soft-launching
+                my future wife to everyone before she even had a place to live.
+              </p>
+              <p>
+                Jersey, New York, Austin, Pocatello—she kept changing cities,
+                but somehow always stayed on my screen. In the end, she picked
+                Dallas. I like to think she actually picked me.
+              </p>
+            </div>
+
+            <div class="story-block">
+              <h3>Her side</h3>
+              <p>
+                What was supposed to be a quick escape trip turned into meeting
+                the most unexpectedly right person, at the most chaotic time.
+              </p>
+              <p>
+                Between job changes, cities, and bad Wi-Fi, there was one very
+                steady constant—this calm, ridiculous, kind man who somehow
+                made everywhere feel a little more like home.
+              </p>
+              <p>
+                From “this is fun” to “okay, this is real” to “fine, Dallas it is,”
+                here we are, inviting you to celebrate the easiest yes of my life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (MINIMAL STRIP) -->
+      <section class="section section-gallery" id="gallery">
+        <div class="shell">
+          <p class="eyebrow">Snapshots</p>
+          <h2 class="section-title">Little moments we love</h2>
+
+          <div class="gallery-strip">
+            <!-- Update these image paths to your own photos -->
+            <img src="photos/a.jpg" alt="" />
+            <img src="photos/b.jpg" alt="" />
+            <img src="photos/c.jpg" alt="" />
+            <img src="photos/d.jpg" alt="" />
+            <img src="photos/e.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP -->
+      <section class="section section-rsvp" id="rsvp">
+        <div class="shell">
+          <p class="eyebrow">RSVP</p>
+          <h2 class="section-title">Let us know you’re coming</h2>
+          <p class="section-text">
+            We’re planning food, drinks, and seating—your RSVP helps a lot.
+            Please respond by <strong>February 1, 2026</strong>.
+          </p>
+
+          <!-- You can wire this to Formspree, Google Forms, etc. -->
+          <form
+            class="rsvp-form"
+            action="https://formspree.io/f/your-id-here"
+            method="POST"
+          >
+            <div class="form-row">
+              <label>
+                Full name
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Will you be joining us?
+                <select name="attendance" required>
+                  <option value="">Select an option</option>
+                  <option value="yes">Yes, wouldn’t miss it</option>
+                  <option value="no">Can’t make it, sending love</option>
+                </select>
+              </label>
+              <label>
+                Guests (including you)
+                <input type="number" name="guests" min="1" max="10" />
+              </label>
+            </div>
+
+            <label class="full-width">
+              Any dietary restrictions or notes?
+              <textarea name="notes" rows="3"></textarea>
+            </label>
+
+            <button type="submit" class="hero-btn rsvp-btn">
+              Submit RSVP
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <p class="footer-text">
+          With love, Sakshi &amp; Saman · March 11, 2026 · Dallas, Texas
+        </p>
       </div>
-
-      <!-- DRESS CODE -->
-      <div class="detail-card">
-        <img src="assets/mandala-thin.png" class="detail-icon" alt="">
-        <h3>Dress Code</h3>
-        <p class="detail-main">Romantic · Festive</p>
-        <p class="detail-sub">Soft colors · Elegant attire · Celebrate with us.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- STORY -->
-  <section id="story" class="story">
-    <h2 class="section-title">Our Story</h2>
-
-    <div class="story-text">
-      <p>
-        What began in September 2021—while our best friends were breaking up—turned into a love story neither of us expected.
-      </p>
-      <p>
-        Sakshi was just trying to get away for a week… and instead met the man who made her stay. From Jersey to New York to Austin to Pocatello, she kept moving—until she finally found home in Dallas.
-      </p>
-      <p>
-        And Saman? The moment he saw her: “Damn… Ckwaaak.” The rest is history in the making.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- RSVP -->
-  <section id="rsvp" class="rsvp">
-    <h2 class="section-title">RSVP</h2>
-
-    <form class="rsvp-form">
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="number" min="1" max="10" placeholder="Guests Attending" required />
-      <textarea placeholder="Message (optional)"></textarea>
-      <button type="submit">Submit RSVP</button>
-    </form>
-  </section>
-
-
-  <footer class="footer">
-    <p>Made with love · Sakshi & Saman</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
