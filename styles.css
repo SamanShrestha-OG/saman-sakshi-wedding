@@ -1,21 +1,24 @@
 /* ========== GLOBAL THEME: NEWAR × MARWADI RAJASTHANI ========== */
 
 :root {
-  --bg: #fff9f0;
-  --bg-alt: #f6eee4;
-  --text-main: #3a2b12;
-  --text-light: #7a6b54;
+  --bg: #f8f7f6;
+  --bg-alt: #eeeeee;
 
-  --accent-gold: #cba135;
-  --accent-gold-dark: #a88324;
-  --accent-maroon: #7a1430;
-  --accent-maroon-deep: #5c0f24;
+  --text-main: #1a1a1a;
+  --text-light: #707070;
 
-  --border-color: #e3cfb2;
-  --radius-card: 22px;
+  --accent-gold: #c9a34c;
+  --accent-gold-dark: #a8853d;
 
-  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.08);
+  --accent-maroon: #1a1a1a;
+  --accent-maroon-deep: #000000;
+
+  --border-color: #dddddd;
+  --radius-card: 18px;
+
+  --shadow-soft: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
+
 
 /* GLOBAL */
 
