@@ -216,6 +216,29 @@ body {
   object-position: center 35% !important;
   transform: scale(1.08) !important;     /* ✅ Cinematic widen */
 }
+.unmute-btn {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(0,0,0,0.45);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 0.45rem 1.4rem;
+
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  z-index: 7;
+}
+
+.unmute-btn:hover {
+  background: rgba(0,0,0,0.65);
+}
 
 /* ✅ GALLERY GRID */
 

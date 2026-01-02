@@ -20,10 +20,18 @@
 
   <!-- ✅ CENTER VIDEO -->
   <div class="hero-center premium-video">
-    <video autoplay loop muted playsinline preload="auto">
+  <video
+    id="heroVideo"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto">
       <source src="./videos/wedding.mp4" type="video/mp4">
     </video>
-
+    <button id="unmuteBtn" class="unmute-btn">
+      Tap for Sound
+    </button>
     <div class="video-vignette"></div>
     <div class="video-grain"></div> 
       <!-- ✅ HERO TEXT OVERLAY -->
