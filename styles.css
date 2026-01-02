@@ -218,27 +218,40 @@ body {
 }
 .unmute-btn {
   position: absolute;
-  bottom: 90px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
 
-  background: rgba(0,0,0,0.45);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.6);
-  padding: 0.45rem 1.4rem;
+  background: transparent;
+  border: none;
+  padding: 0;
 
-  font-size: 0.6rem;
-  letter-spacing: 0.35em;
+  font-family: "Playfair Display", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
 
-  backdrop-filter: blur(4px);
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   z-index: 7;
+
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.unmute-btn::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  margin: 0.4rem auto 0;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .unmute-btn:hover {
-  background: rgba(0,0,0,0.65);
+  opacity: 1;
 }
+
 
 /* ✅ GALLERY GRID */
 
@@ -810,3 +823,584 @@ body {
     drop-shadow(0 4px 10px rgba(0,0,0,0.15))
     sepia(1) saturate(3) hue-rotate(8deg); /* ✅ Soft gold tint */
 }
+/* =========================================
+   ⏳ COUNTDOWN — LUXURY MINIMAL
+   ========================================= */
+
+.countdown-section {
+  padding: 1.8rem 1.5rem 2.2rem;
+  text-align: center;
+  background: var(--bg);
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+.countdown-timer div {
+  text-align: center;
+}
+
+.countdown-timer span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text-main);
+}
+
+.countdown-timer small {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+/* Mobile tightening */
+@media (max-width: 600px) {
+  .countdown-timer {
+    gap: 1.4rem;
+  }
+
+  .countdown-timer span {
+    font-size: 1.8rem;
+  }
+}
+/* Make seconds lighter & calmer */
+.countdown-timer .seconds span {
+  font-size: 1.6rem;
+  opacity: 0.55;
+}
+
+.countdown-timer .seconds small {
+  opacity: 0.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .countdown-timer .seconds span {
+    font-size: 1.3rem;
+  }
+}
+/* =========================================
+   🕯️ EVENING FLOW / ITINERARY
+   ========================================= */
+
+.itinerary-section {
+  padding: 2.6rem 1.5rem 3.2rem;
+  background: var(--bg);
+  text-align: center;
+}
+
+
+
+.itinerary-section .section-title {
+  font-family: "Allura", cursive;
+  font-size: 2.6rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.itinerary-section .section-title {
+  font-weight: 400 !important;
+  letter-spacing: 0.06em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.itinerary-list {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.itinerary-item {
+  margin-bottom: 1.6rem;
+}
+
+.itinerary-item .time {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.35rem;
+}
+
+.itinerary-item .event {
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.itinerary-item .event small {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+}
+
+/* Mobile tightening */
+@media (max-width: 600px) {
+  .itinerary-item {
+    margin-bottom: 1.3rem;
+  }
+
+  .itinerary-item .event {
+    font-size: 0.9rem;
+  }
+}
+/* =========================================
+   🎼 EVENING FLOW — ELEGANT TIMELINE
+   ========================================= */
+
+.itinerary-timeline {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  padding-left: 2.2rem;
+}
+
+/* Vertical line */
+.itinerary-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(199,178,153,0.6),
+    transparent
+  );
+}
+
+/* Timeline items */
+.itinerary-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.6rem;
+}
+
+/* Dot */
+.itinerary-item::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  background: #c7b299;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(199,178,153,0.2);
+}
+
+/* Time label */
+.itinerary-item .time {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.35rem;
+}
+
+/* Event text */
+.itinerary-item .event {
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.itinerary-item .event small {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+}
+
+/* Mobile refinement */
+@media (max-width: 600px) {
+  .itinerary-timeline {
+    padding-left: 1.8rem;
+  }
+
+  .itinerary-item {
+    margin-bottom: 1.6rem;
+  }
+}
+/* =========================================
+   │ VERTICAL MILESTONE TIMELINE
+   ========================================= */
+
+.milestone-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* central line */
+.milestone-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(199,178,153,0.5);
+  transform: translateX(-50%);
+}
+
+/* milestone blocks */
+.milestone {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+/* left/right positioning */
+.milestone.left {
+  text-align: right;
+}
+
+.milestone.right {
+  margin-left: 50%;
+  text-align: left;
+}
+
+/* icon */
+.milestone .icon {
+  position: absolute;
+  top: 1.8rem;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(199,178,153,0.8);
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.milestone.left .icon {
+  right: -17px;
+}
+
+.milestone.right .icon {
+  left: -17px;
+}
+
+.milestone svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-main);
+}
+
+/* content */
+.milestone .time {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 0.4rem;
+}
+
+.milestone h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.4rem;
+}
+
+.milestone p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* mobile stack */
+@media (max-width: 768px) {
+  .milestone-timeline::before {
+    left: 14px;
+  }
+
+  .milestone,
+  .milestone.left,
+  .milestone.right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 3.5rem;
+    text-align: left;
+  }
+
+  .milestone .icon {
+    left: 0;
+    right: auto;
+  }
+}
+/* =========================================
+   ❓ FAQ — MINIMAL & ELEGANT
+   ========================================= */
+
+.faq-section {
+  padding: 2.6rem 1.5rem 3.2rem;
+  background: var(--bg);
+  text-align: center;
+}
+
+.faq-list {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 0;
+}
+
+/* Remove default triangle */
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Subtle plus/minus */
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  font-size: 1rem;
+  color: var(--text-light);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+/* Answer */
+.faq-item p {
+  margin: 0.8rem 0 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+/* =========================================
+   🧭 TOP NAV — MINIMAL LUXURY
+   ========================================= */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(251, 247, 241, 0.85);
+  backdrop-filter: blur(8px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.nav-logo {
+  font-family: "Allura", cursive;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav-links a {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+  opacity: 0.8;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* RSVP — subtle emphasis, no box */
+
+.nav-rsvp {
+  position: relative;
+  padding: 0;
+  border: none;
+
+  opacity: 1;
+}
+
+/* soft underline */
+.nav-rsvp::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 100%;
+  height: 1px;
+  background: var(--text-main);
+  opacity: 0.4;
+
+  transition: opacity 0.2s ease;
+}
+
+.nav-rsvp:hover::after {
+  opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+}
+/* =========================================
+   ✦ NAV LOGO — INTERLOCKED WITH GOLD ACCENT
+   ========================================= */
+
+/* Base logo */
+.logo-interlock {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  /* crisp rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+}
+
+/* BLACK S — rich ink effect */
+.logo-interlock {
+  color: #1f1b18; /* deeper than pure black */
+
+  text-shadow:
+    0 1px 1.5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* overlap */
+.logo-interlock span {
+  margin-left: -0.32em;
+}
+
+/* gold accent */
+/* GOLD S — metallic */
+.logo-interlock .gold {
+  background: linear-gradient(
+    180deg,
+    #f7e58a 0%,
+    #d4af37 45%,
+    #b8962e 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 500;
+  font-size: 1.08em;
+
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.28);
+}
+.logo-interlock:hover .gold {
+  filter: brightness(1.05);
+}
+
+/* =========================================
+   📱 HERO ORDER FIX — MOBILE FIRST VIDEO
+   ========================================= */
+
+@media (max-width: 900px) {
+  .hero-triptych {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Video first */
+  .hero-center {
+    order: 1;
+  }
+
+  /* Left photo second */
+  .hero-side:first-of-type {
+    order: 2;
+  }
+
+  /* Right photo third */
+  .hero-side:last-of-type {
+    order: 3;
+  }
+}
+
+
+

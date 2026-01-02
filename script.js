@@ -51,16 +51,76 @@ document.addEventListener("DOMContentLoaded", () => {
   const unmuteBtn = document.getElementById("unmuteBtn");
 
   if (video && unmuteBtn) {
-    unmuteBtn.addEventListener("click", () => {
-      video.muted = false;
-      video.play();
-      unmuteBtn.style.display = "none";
-    });
 
-    video.addEventListener("click", () => {
+    // Auto-hide after 5 seconds
+    const hideTimer = setTimeout(() => {
+      unmuteBtn.style.opacity = "0";
+      setTimeout(() => {
+        unmuteBtn.style.display = "none";
+      }, 400); // match CSS fade
+    }, 5000);
+
+    const unmute = () => {
+      clearTimeout(hideTimer);
       video.muted = false;
       video.play();
       unmuteBtn.style.display = "none";
-    });
+    };
+
+    unmuteBtn.addEventListener("click", unmute);
+    video.addEventListener("click", unmute);
   }
+});
+  /* ======================
+     COUNTDOWN TIMER
+     ====================== */
+
+  // March 11, 2026 — 6:00 PM CST (Dallas)
+  const targetDate = new Date("March 11, 2026 18:00:00 GMT-0600");
+
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+  const countdownEl = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdownEl.innerHTML =
+        "<span style='font-size:1rem; letter-spacing:0.2em;'>It’s today ✨</span>";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    daysEl.textContent = days;
+    hoursEl.textContent = hours.toString().padStart(2, "0");
+    minutesEl.textContent = minutes.toString().padStart(2, "0");
+    secondsEl.textContent = seconds.toString().padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000); // update every second
+
+/* ======================
+   SMOOTH SCROLL FOR NAV
+   ====================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
 });
