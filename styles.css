@@ -1402,5 +1402,69 @@ body {
   }
 }
 
+/* =========================================
+   📱 MOBILE TYPOGRAPHY TUNING
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  /* HERO OVERLAY */
+  .hero-overlay-names {
+    font-size: 1.7rem;      /* was ~2.1–2.6 */
+    letter-spacing: 0.06em;
+  }
+
+  .hero-overlay-date {
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+  }
+
+  /* SECTION SCRIPT TITLES */
+  .section-title {
+    font-size: 2.1rem;      /* was ~2.6–2.8 */
+    letter-spacing: 0.05em;
+  }
+
+  /* OUR STORY TEXT */
+  .our-story-text {
+    font-size: 0.9rem;      /* was ~1.0 */
+    letter-spacing: 0.08em;
+    line-height: 1.65;
+  }
+
+  /* ITINERARY EVENTS */
+  .timeline-item .event {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  .timeline-item .time {
+    font-size: 0.55rem;
+  }
+
+  /* FAQ */
+  .faq-item summary {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
+  .faq-item p {
+    font-size: 0.8rem;
+  }
+
+  /* NAV BAR */
+  .nav-logo {
+    font-size: 1.3rem;      /* logo stays present but calmer */
+  }
+
+  .nav-links a {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+  }
+    section {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+}
 
 
