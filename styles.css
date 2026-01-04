@@ -1603,3 +1603,78 @@ body {
     padding-left: 1.5rem;
   }
 }
+/* =========================================
+   📱 EVENING FLOW — MOBILE REFINEMENT (OPTION B)
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .milestone-timeline {
+    padding: 1.6rem 0;        /* tighter vertical rhythm */
+  }
+
+  .milestone {
+    padding-left: 3.2rem;     /* slightly closer to line */
+  }
+
+  .milestone h4 {
+    font-size: 0.9rem;        /* calmer headline */
+    letter-spacing: 0.08em;
+  }
+
+  .milestone p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .milestone .time {
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+  }
+
+  .milestone .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .milestone svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+/* =========================================
+   📱 FAQ — MOBILE REFINEMENT (MATCH DESKTOP)
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .faq-section {
+    padding: 2.8rem 1.6rem 3.2rem;   /* more breathing room */
+  }
+
+  .faq-list {
+    max-width: 560px;                /* feels like desktop column */
+  }
+
+  .faq-item {
+    padding: 1.4rem 0;               /* space between questions */
+  }
+
+  .faq-item summary {
+    font-size: 0.9rem;               /* calmer */
+    letter-spacing: 0.1em;
+    line-height: 1.55;
+    padding-right: 2rem;             /* space from + icon */
+  }
+
+  .faq-item summary::after {
+    right: 0;
+    top: 0.1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-top: 0.9rem;
+  }
+}
