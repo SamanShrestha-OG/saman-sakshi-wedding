@@ -1181,25 +1181,53 @@ body {
 }
 
 /* mobile stack */
+/* =========================================
+   📱 EVENING FLOW — MOBILE (DESKTOP STYLE)
+   ========================================= */
+
 @media (max-width: 768px) {
+
   .milestone-timeline::before {
-    left: 14px;
+    left: 50%;
   }
 
-  .milestone,
-  .milestone.left,
+  .milestone {
+    width: 50%;
+  }
+
+  .milestone.left {
+    text-align: right;
+    padding-right: 4rem;
+  }
+
   .milestone.right {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 3.5rem;
+    margin-left: 50%;
     text-align: left;
+    padding-left: 4rem;
   }
 
   .milestone .icon {
-    left: 0;
+    left: auto;
     right: auto;
   }
+
+  /* Typography tuning */
+  .milestone h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+
+  .milestone p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .milestone .time {
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+  }
 }
+
 /* =========================================
    ❓ FAQ — MINIMAL & ELEGANT
    ========================================= */
