@@ -1703,3 +1703,46 @@ body {
   color: var(--text-light);
   margin: -1rem auto 1.8rem;
 }
+@media (max-width: 600px) {
+
+  /* Give milestones more horizontal room */
+  .milestone {
+    width: 100%;
+    padding-left: 4.2rem;   /* space from center line */
+    padding-right: 1.5rem;
+  }
+
+  /* Disable left/right split on mobile */
+  .milestone.left,
+  .milestone.right {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  /* Move icons to the center line */
+  .milestone .icon {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Reduce forced wrapping */
+  .milestone h4 {
+    max-width: 100%;
+    white-space: normal;   /* allow natural flow */
+  }
+
+  .milestone p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .milestone h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .milestone p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+}
