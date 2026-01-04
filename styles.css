@@ -146,7 +146,7 @@ body {
 /* RSVP SECTION */
 
 .rsvp-section {
-  padding: 4rem 1.5rem 5rem;
+  padding: 2rem 1.5rem 2rem;
   background: white;
 }
 
@@ -542,7 +542,7 @@ body {
 }
 .next-section {
   margin-top: 0 !important;
-  padding-top: 2.6rem !important;
+  padding-top: 0.8rem !important;
 }
 /* =========================================
    ✅ WEDDING RINGS IMAGE (JPEG)
@@ -1233,7 +1233,7 @@ body {
    ========================================= */
 
 .faq-section {
-  padding: 1.8rem 1.5rem 2.4rem;
+  padding: 1.8rem 1.5rem 1.2rem;
   background: var(--bg);
   text-align: center;
 }
