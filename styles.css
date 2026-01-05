@@ -1833,13 +1833,13 @@ body {
   /* Keep left / right layout */
   .milestone.left {
     text-align: right;
-    padding-right: 75%;
+    padding-right: 55%;
     padding-left: 0;
   }
 
   .milestone.right {
     text-align: left;
-    padding-left: 75%;
+    padding-left: 55%;
     padding-right: 0;
   }
 
