@@ -1820,4 +1820,68 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+
+  /* Milestone container */
+  .milestone {
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+    padding: 4.6rem 1.2rem 2.8rem;
+  }
+
+  /* Keep left / right layout */
+  .milestone.left {
+    text-align: right;
+    padding-right: 46%;
+    padding-left: 0;
+  }
+
+  .milestone.right {
+    text-align: left;
+    padding-left: 46%;
+    padding-right: 0;
+  }
+
+  /* Center photo perfectly */
+  .milestone-photo {
+    position: absolute;
+    top: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    z-index: 10;
+  }
+
+  /* Push text away from photo */
+  .milestone.left .content {
+    padding-right: 2.4rem;
+  }
+
+  .milestone.right .content {
+    padding-left: 2.4rem;
+  }
+
+  /* Typography — smaller & elegant */
+  .milestone .time {
+    font-size: 0.52rem;
+    letter-spacing: 0.24em;
+    margin-bottom: 0.3rem;
+  }
+
+  .milestone h4 {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+  }
+
+  .milestone p {
+    font-size: 0.72rem;
+    line-height: 1.45;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+}
 
