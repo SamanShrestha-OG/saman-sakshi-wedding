@@ -1743,6 +1743,41 @@ body {
     padding-bottom: 2.6rem;
   }
 }
+@media (max-width: 600px) {
+
+  /* Create a protected zone around the photo */
+  .milestone .content {
+    padding-top: 0;               /* keep tight vertically */
+  }
+
+  /* Push LEFT text away from center photo */
+  .milestone.left .content {
+    padding-right: 4.8rem;        /* ⬅️ key fix */
+  }
+
+  /* Push RIGHT text away from center photo */
+  .milestone.right .content {
+    padding-left: 4.8rem;         /* ⬅️ key fix */
+  }
+
+}
+@media (max-width: 600px) {
+
+  .milestone h4 {
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .milestone p {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .milestone .time {
+    font-size: 0.55rem;
+  }
+
+}
 
 
 
