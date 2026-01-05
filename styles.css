@@ -1692,7 +1692,57 @@ body {
     z-index: 10;
   }
 }
+@media (max-width: 600px) {
 
+  /* ===============================
+     📱 TIMELINE — MOBILE POLISH
+     =============================== */
+
+  /* Give milestones more vertical breathing room */
+  .milestone {
+    padding-top: 5.2rem;   /* ⬅️ pushes text below photo */
+    padding-bottom: 3.2rem;
+  }
+
+  /* TIME */
+   .milestone .time {
+    font-size: 0.48rem;      /* ⬅️ smaller */
+    letter-spacing: 0.25em;
+    margin-bottom: 0.35rem;
+  }
+
+  /* TITLE (Guest Arrival, First Dance…) */
+  .milestone h4 {
+    font-size: 0.68rem;      /* ⬅️ noticeably smaller */
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+  }
+
+  /* DESCRIPTION */
+  .milestone p {
+    font-size: 0.62rem;      /* ⬅️ compact but readable */
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+
+  /* Keep text clear of center line */
+  .milestone.left .content {
+    padding-right: 0.6rem;
+  }
+
+  .milestone.right .content {
+    padding-left: 0.6rem;
+  }
+
+  /* PHOTO — slightly lift it so it never collides */
+  .milestone-photo {
+    top: 1.2rem;     /* ⬅️ pulls photo up */
+  }
+    .milestone {
+    padding-bottom: 2.6rem;
+  }
+}
 
 
 
