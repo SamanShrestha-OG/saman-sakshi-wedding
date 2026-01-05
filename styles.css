@@ -1659,28 +1659,35 @@ body {
 
 @media (max-width: 600px) {
 
+   /* Milestones must be full width on mobile */
   .milestone {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 4.5rem 1.25rem 3rem;
     position: relative;
-    width: 100%;
-    margin-left: 0;
-    padding: 4rem 1.25rem 2.5rem;
-    text-align: center;
   }
 
-  /* HARD RESET desktop offsets */
-  .milestone.left .milestone-photo,
-  .milestone.right .milestone-photo {
+  /* Text alignment only */
+  .milestone.left {
+    text-align: right;
+    padding-right: 52%;
+  }
+
+  .milestone.right {
+    text-align: left;
+    padding-left: 52%;
+  }
+
+  /* FORCE photo dead-center on the vertical line */
+  .milestone-photo {
+    position: absolute !important;
+    top: 1.6rem;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-  }
-
-  /* Ensure photo is absolutely positioned (relative to .milestone) */
-  .milestone-photo {
-    position: absolute !important;
-    top: 1.2rem;
     width: 75px;
     height: 75px;
+    z-index: 10;
   }
 
   /* Pull content slightly away from center line */
