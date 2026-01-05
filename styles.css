@@ -1921,3 +1921,14 @@ body {
     line-height: 1.45;
   }
 }
+@media (max-width: 600px) {
+
+  /* HARD RESET photo positioning */
+  .milestone.left .milestone-photo,
+  .milestone.right .milestone-photo {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
+}
