@@ -1779,5 +1779,45 @@ body {
 
 }
 
+@media (max-width: 600px) {
+
+  /* Milestones full width */
+  .milestone {
+    width: 100%;
+    margin-left: 0;
+    padding: 3.6rem 1.2rem 2.8rem; /* ⬅️ slightly tighter */
+  }
+
+  /* LEFT items — pull text closer */
+  .milestone.left {
+    text-align: right;
+    padding-right: 46%;
+  }
+
+  /* RIGHT items — pull text closer */
+  .milestone.right {
+    text-align: left;
+    padding-left: 46%;
+  }
+
+  /* Photo stays perfectly centered */
+  .milestone-photo {
+    top: 1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+  }
+
+}
+@media (max-width: 600px) {
+  .milestone h4 {
+    margin-bottom: 0.25rem;
+  }
+
+  .milestone p {
+    margin-top: 0;
+  }
+}
 
 
