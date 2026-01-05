@@ -1609,16 +1609,17 @@ body {
 }
 
 
+
+
+/* Base milestone photo */
 .milestone-photo {
   position: absolute;
   top: 1.8rem;
-
-  width: 42px;
-  height: 42px;
+  width: 75px;
+  height: 75px;
 
   border-radius: 50%;
   overflow: hidden;
-
   background: var(--bg);
   border: 1.5px solid rgba(199,178,153,0.9);
 
@@ -1629,7 +1630,15 @@ body {
   z-index: 6;
 }
 
-/* NEW — centered correctly for 56px image */
+.milestone-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+/* Desktop offsets */
 .milestone.left .milestone-photo {
   right: -38px;
 }
@@ -1640,57 +1649,48 @@ body {
 
 
 
-.milestone-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 
 
-/* Bigger milestone image */
-.milestone-photo {
-  width: 75px;          /* ⬅️ was ~34px before */
-  height: 75px;
-  border-radius: 50%;
-  overflow: hidden;
 
-  margin: 0 auto 0.4rem;
 
-  border: 1px solid rgba(199,178,153,0.8);
-  background: var(--bg);
-}
 .milestone-photo img {
   transition: transform 0.45s ease, filter 0.45s ease;
 }
 
 /* =====================================
-   📱 MOBILE — FIX MILESTONE PHOTO CENTER
+   📱 MOBILE — MILESTONE RESET (FINAL)
    ===================================== */
 @media (max-width: 600px) {
 
-  /* Keep left/right structure */
+  /* Keep desktop left/right structure */
   .milestone {
     width: 50%;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   .milestone.left {
-    padding-right: 7rem;
     text-align: right;
+    padding-right: 7rem;
   }
 
   .milestone.right {
     margin-left: 50%;
-    padding-left: 7rem;
     text-align: left;
+    padding-left: 7rem;
   }
 
-  /* 🔑 Override desktop offsets */
-  .milestone.left .milestone-photo,
-  .milestone.right .milestone-photo {
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
+  /* FORCE photo dead-center on the line */
+  .milestone-photo {
+    position: absolute;
+    top: 1.8rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
   }
+
 }
+
 
