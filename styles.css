@@ -1191,9 +1191,7 @@ body {
     left: 50%;
   }
 
-  .milestone {
-    width: 50%;
-  }
+
 
   .milestone.left {
     text-align: right;
@@ -1697,19 +1695,9 @@ body {
 }
 @media (max-width: 600px) {
 
-  /* Give milestones more horizontal room */
-  .milestone {
-    width: 100%;
-    padding-left: 4.2rem;   /* space from center line */
-    padding-right: 2.5rem;
-  }
+
 
   /* Disable left/right split on mobile */
-  .milestone.left,
-  .milestone.right {
-    margin-left: 0;
-    text-align: left;
-  }
 
   /* Move icons to the center line */
   .milestone .icon {
@@ -1814,12 +1802,7 @@ body {
 }
 @media (max-width: 600px) {
 
-  /* Make each milestone full width */
-  .milestone {
-    width: 100%;
-    padding: 3.8rem 1.5rem 2rem; /* space for photo above */
-    text-align: center;
-  }
+
 
   /* Remove left/right behavior */
   .milestone.left,
@@ -1838,12 +1821,7 @@ body {
     transform: translateX(-50%);
   }
 }
-@media (max-width: 600px) {
 
-  .milestone .content {
-    margin-top: 4.8rem;  /* ⬅️ key spacing fix */
-  }
-}
 @media (max-width: 600px) {
   .milestone h4 {
     font-size: 0.85rem;
@@ -1857,12 +1835,6 @@ body {
 }
 @media (max-width: 600px) {
 
-  /* Keep 2-column layout */
-  .milestone {
-    width: 50%;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
 
   /* Push LEFT text further left */
   .milestone.left {
@@ -1904,5 +1876,48 @@ body {
     box-shadow:
       0 10px 20px rgba(0,0,0,0.18),
       0 0 0 4px rgba(199,178,153,0.25);
+  }
+}
+@media (max-width: 600px) {
+
+  /* Keep desktop structure */
+  .milestone {
+    width: 50%;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* LEFT side */
+  .milestone.left {
+    text-align: right;
+    padding-right: 7rem;   /* tuned for 75px photo */
+  }
+
+  /* RIGHT side */
+  .milestone.right {
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 7rem;    /* tuned for 75px photo */
+  }
+
+  /* Center photo perfectly on the line */
+  .milestone-photo {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    top: 1.8rem;
+  }
+
+  /* Typography tightening */
+  .milestone h4 {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+
+  .milestone p {
+    font-size: 0.75rem;
+    line-height: 1.45;
   }
 }
