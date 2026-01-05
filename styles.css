@@ -1118,14 +1118,14 @@ body {
 /* left/right positioning */
 .milestone.left {
   text-align: right;
-    padding-right: 1.5rem;   /* ⬅️ key change */
+    padding-right: 4.5rem;   /* ⬅️ key change */
 
 }
 
 .milestone.right {
   margin-left: 50%;
   text-align: left;
-    padding-left: 1.5rem;    /* ⬅️ key change */
+    padding-left: 4.5rem;    /* ⬅️ key change */
 
 }
 
@@ -1626,15 +1626,7 @@ body {
     padding: 2rem 0;
   }
 }
-@media (min-width: 1024px) {
-  .milestone.left {
-    padding-right: 1.5rem;
-  }
 
-  .milestone.right {
-    padding-left: 1.5rem;
-  }
-}
 /* ===============================
    📱 EVENING FLOW — MOBILE FIX
    =============================== */
@@ -1709,7 +1701,7 @@ body {
   .milestone {
     width: 100%;
     padding-left: 4.2rem;   /* space from center line */
-    padding-right: 1.5rem;
+    padding-right: 2.5rem;
   }
 
   /* Disable left/right split on mobile */
@@ -1744,5 +1736,79 @@ body {
   .milestone p {
     font-size: 0.78rem;
     line-height: 1.45;
+  }
+}
+.milestone-photo {
+  position: absolute;
+  top: 1.8rem;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: var(--bg);
+  border: 1.5px solid rgba(199,178,153,0.9);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.18),
+    0 0 0 3px rgba(199,178,153,0.25);
+
+  z-index: 6;
+}
+
+/* NEW — centered correctly for 56px image */
+.milestone.left .milestone-photo {
+  right: -38px;
+}
+
+.milestone.right .milestone-photo {
+  left: -38px;
+}
+
+
+
+.milestone-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile — center on timeline */
+@media (max-width: 600px) {
+  .milestone-photo {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+/* Bigger milestone image */
+.milestone-photo {
+  width: 75px;          /* ⬅️ was ~34px before */
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  margin: 0 auto 0.4rem;
+
+  border: 1px solid rgba(199,178,153,0.8);
+  background: var(--bg);
+}
+.milestone-photo img {
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+@media (hover: hover) {
+  .milestone-photo:hover img {
+    transform: scale(1.15);     /* subtle, classy zoom */
+    filter: brightness(1.05);
+  }
+}
+@media (hover: hover) {
+  .milestone-photo:hover {
+    box-shadow:
+      0 10px 22px rgba(0,0,0,0.22),
+      0 0 0 4px rgba(199,178,153,0.35);
   }
 }
