@@ -1752,12 +1752,12 @@ body {
 
   /* Push LEFT text away from center photo */
   .milestone.left .content {
-    padding-right: 4.8rem;        /* ⬅️ key fix */
+    padding-right: 2.8rem;        /* ⬅️ key fix */
   }
 
   /* Push RIGHT text away from center photo */
   .milestone.right .content {
-    padding-left: 4.8rem;         /* ⬅️ key fix */
+    padding-left: 2.8rem;         /* ⬅️ key fix */
   }
 
 }
