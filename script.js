@@ -103,7 +103,7 @@ if (video && unmuteBtn && soundOff && soundOn) {
      ====================== */
 
   // March 11, 2026 — 6:00 PM CST (Dallas)
-  const targetDate = new Date("March 11, 2026 18:00:00 GMT-0600");
+  const targetDate = new Date("March 11, 2026 17:30:00 GMT-0600");
 
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
