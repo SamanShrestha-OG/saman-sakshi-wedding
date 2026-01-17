@@ -50,25 +50,38 @@ const soundOn = document.getElementById("sound-on");
 
 if (video && unmuteBtn && soundOff && soundOn) {
 
-  // Required for autoplay
+  // ✅ Force initial state (iPhone-safe)
   video.muted = true;
+  video.volume = 0;
+
+  soundOff.style.display = "inline";
+  soundOn.style.display = "none";
 
   unmuteBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    video.muted = !video.muted;
+    const soundIsOn = video.volume > 0;
 
-    if (video.muted) {
+    if (soundIsOn) {
+      // 🔇 Turn sound OFF (iOS + Chrome safe)
+      video.volume = 0;
+      video.muted = true;
+
       soundOff.style.display = "inline";
       soundOn.style.display = "none";
     } else {
-      video.play(); // important for iOS
+      // 🔊 Turn sound ON
+      video.muted = false;
+      video.volume = 1;
+      video.play(); // REQUIRED for iPhone
+
       soundOff.style.display = "none";
       soundOn.style.display = "inline";
     }
   });
 }
+
 
 
   /* ======================
