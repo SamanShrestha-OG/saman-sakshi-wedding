@@ -386,22 +386,53 @@ If you’d like to contribute, we promise to spend it wisely (or at least memora
 
     <h2 class="rsvp-title">Kindly Respond</h2>
 
-    <form id="rsvpForm" class="rsvp-form">
-      <input name="name" placeholder="Full Name" required>
-      <input name="email" type="email" placeholder="Email Address" required>
-      <input name="guests" type="number" min="1" max="10" placeholder="Number of Guests" required>
+<form id="rsvpForm" class="rsvp-form">
 
-      <select name="attending" required>
-        <option value="">Will you attend?</option>
-        <option value="Yes">Joyfully Accept</option>
-        <option value="No">Regretfully Decline</option>
-      </select>
+  <input
+    name="fullName"
+    placeholder="Full Name"
+    required
+  >
 
-      <textarea name="notes" placeholder="Dietary notes (optional)"></textarea>
+  <input
+    name="email"
+    type="email"
+    placeholder="Email Address"
+    required
+  >
 
-      <button type="submit">Submit</button>
-      <p id="formStatus"></p>
-    </form>
+  <input
+    name="phone"
+    type="tel"
+    placeholder="Phone Number (optional)"
+  >
+
+  <select name="attending" required>
+    <option value="">Will you attend?</option>
+    <option value="Yes">Joyfully Accept</option>
+    <option value="No">Regretfully Decline</option>
+  </select>
+
+  <input
+    name="guestCount"
+    type="number"
+    min="1"
+    max="10"
+    placeholder="Number of Guests"
+    required
+  >
+
+  <textarea
+    name="dietaryNotes"
+    placeholder="Dietary Notes (optional)"
+  ></textarea>
+
+
+  <button type="submit">Submit</button>
+  <p id="formStatus"></p>
+
+</form>
+
   </section>
 
   <script src="script.js"></script>

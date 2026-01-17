@@ -1,6 +1,6 @@
 // Google Apps Script Web App URL
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbwRlfJdrrizwTlw9JqTSrPYguUjvh-A1KnFAFWE9CIb3RxHSpX1VfC0fJ-GBUxutTOvyQ/exec";
+  "https://script.google.com/macros/s/AKfycbxUH8HARt9uKgwXvy5FQgzv3E0HUqOMZt_o0AIiqeIUE-zxKR_g0-9wb3j2v5fF52GwYQ/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ======================
@@ -10,38 +10,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("rsvpForm");
   const statusEl = document.getElementById("formStatus");
 
-  if (form) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-      statusEl.textContent = "Sending your RSVP...";
-      statusEl.style.color = "#555";
+    const submitBtn = form.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sent ✓";
 
-      const formData = new FormData(form);
+    statusEl.textContent = "Thank you! Your RSVP has been received.";
+    statusEl.style.color = "green";
 
-      try {
-        const response = await fetch(scriptURL, {
-          method: "POST",
-          body: formData,
-        });
+    const formData = new FormData(form);
 
-        if (!response.ok) throw new Error("Network error");
-
-        const result = await response.json().catch(() => ({}));
-
-        statusEl.textContent =
-          "Thank you! Your RSVP has been received.";
-        statusEl.style.color = "green";
-        form.reset();
-
-      } catch (error) {
-        console.error(error);
-        statusEl.textContent =
-          "Something went wrong. Please try again.";
-        statusEl.style.color = "red";
-      }
+    // Fire-and-forget send
+    fetch(scriptURL, {
+      method: "POST",
+      body: new URLSearchParams(new FormData(form))
     });
-  }
+ 
+
+    // Optional: clear form after a short delay
+    setTimeout(() => {
+     submitBtn.textContent = "RSVP Received ✓";
+    }, 500);
+       setTimeout(() => {
+      form.reset();
+    }, 600);
+  });
+}
+
+
 
 const video = document.getElementById("heroVideo");
 const unmuteBtn = document.getElementById("unmuteBtn");
