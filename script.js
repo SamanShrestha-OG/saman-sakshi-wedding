@@ -49,36 +49,50 @@ const soundOff = document.getElementById("sound-off");
 const soundOn = document.getElementById("sound-on");
 
 if (video && unmuteBtn && soundOff && soundOn) {
-
-  // Initial state
-  video.muted = true;
+  // Initial UI state (matches <video muted>)
   soundOff.style.display = "inline";
   soundOn.style.display = "none";
 
-  let audioUnlocked = false;
+  // Make sure we start muted for autoplay policies
+  video.muted = true;
+  video.volume = 0;
 
-  unmuteBtn.addEventListener("click", (e) => {
+  unmuteBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    // 🔑 First interaction: unlock audio
-    if (!audioUnlocked) {
-      video.play();        // required by iOS
-      audioUnlocked = true;
-    }
+    const turningOn = video.muted || video.volume === 0;
 
-    // 🔊 Toggle sound ONLY (no pause)
-    video.muted = !video.muted;
+    if (turningOn) {
+      // 🔊 TURN SOUND ON (iPhone-safe)
+      video.muted = false;
+      video.volume = 1;
 
-    if (video.muted) {
-      soundOff.style.display = "inline";
-      soundOn.style.display = "none";
-    } else {
+      // iOS often needs a restart for audio to attach
+      try {
+        video.pause();
+      } catch (_) {}
+
+      try {
+        await video.play();
+      } catch (_) {
+        // If play fails, try one more time without pause
+        try { await video.play(); } catch (_) {}
+      }
+
       soundOff.style.display = "none";
       soundOn.style.display = "inline";
+    } else {
+      // 🔇 TURN SOUND OFF (reliable everywhere)
+      video.volume = 0;
+      video.muted = true;
+
+      soundOff.style.display = "inline";
+      soundOn.style.display = "none";
     }
   });
 }
+
 
 
 
