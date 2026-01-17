@@ -217,27 +217,29 @@ body {
   transform: scale(1.08) !important;     /* ✅ Cinematic widen */
 }
 .unmute-btn {
-  position: absolute;
-  bottom: 110px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background: transparent;
-  border: none;
-  padding: 0;
+  width: 42px;
+  height: 42px;
 
-  font-family: "Playfair Display", serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
 
-  color: rgba(255, 255, 255, 0.85);
-  cursor: pointer;
-  z-index: 7;
-
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
+.unmute-btn:hover {
+  transform: scale(1.06);
+  opacity: 1;
+}
+
+.unmute-btn svg {
+  color: rgba(255,255,255,0.9);
+}
+
 
 .unmute-btn::after {
   content: "";
@@ -247,10 +249,32 @@ body {
   margin: 0.4rem auto 0;
   background: rgba(255, 255, 255, 0.6);
 }
+/* 🔊 FORCE HERO SOUND BUTTON VISIBLE */
+.unmute-btn {
+  position: absolute !important;
+  bottom: 110px;
 
-.unmute-btn:hover {
-  opacity: 1;
+  z-index: 999 !important;   /* ⬅️ THIS IS THE KEY */
+  opacity: 1 !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
 }
+.unmute-btn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
 
 
 /* ✅ GALLERY GRID */
@@ -1885,3 +1909,49 @@ body {
   }
 }
 
+/* 🎧 HERO SOUND TOGGLE — EDITORIAL STYLE */
+
+.sound-toggle {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+
+  z-index: 8;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.sound-toggle:hover {
+  opacity: 1;
+}
+
+.sound-toggle::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 1px;
+  margin: 0.4rem auto 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+.video-vignette,
+.video-grain,
+.hero-center::after {
+  pointer-events: none !important;
+}
+.sound-toggle {
+  pointer-events: auto !important;
+  z-index: 20 !important;
+}

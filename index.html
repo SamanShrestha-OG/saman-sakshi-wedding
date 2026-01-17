@@ -53,9 +53,12 @@
     preload="auto">
       <source src="./videos/Weddingwsound.mp4" type="video/mp4">
     </video>
-    <button id="unmuteBtn" class="unmute-btn">
-      Tap for Sound
+    <button id="unmuteBtn" class="sound-toggle" aria-label="Toggle sound">
+      <span id="sound-off">🔇</span>
+      <span id="sound-on" style="display:none;">🔊</span>
     </button>
+
+
     <div class="video-vignette"></div>
     <div class="video-grain"></div> 
       <!-- ✅ HERO TEXT OVERLAY -->

@@ -43,34 +43,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ======================
-     HERO VIDEO SOUND TOGGLE
-     ====================== */
+const video = document.getElementById("heroVideo");
+const unmuteBtn = document.getElementById("unmuteBtn");
+const soundOff = document.getElementById("sound-off");
+const soundOn = document.getElementById("sound-on");
 
-  const video = document.getElementById("heroVideo");
-  const unmuteBtn = document.getElementById("unmuteBtn");
+if (video && unmuteBtn && soundOff && soundOn) {
 
-  if (video && unmuteBtn) {
+  // Required for autoplay
+  video.muted = true;
 
-    // Auto-hide after 5 seconds
-    const hideTimer = setTimeout(() => {
-      unmuteBtn.style.opacity = "0";
-      setTimeout(() => {
-        unmuteBtn.style.display = "none";
-      }, 400); // match CSS fade
-    }, 5000);
+  unmuteBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-    const unmute = () => {
-      clearTimeout(hideTimer);
-      video.muted = false;
-      video.play();
-      unmuteBtn.style.display = "none";
-    };
+    video.muted = !video.muted;
 
-    unmuteBtn.addEventListener("click", unmute);
-    video.addEventListener("click", unmute);
-  }
-});
+    if (video.muted) {
+      soundOff.style.display = "inline";
+      soundOn.style.display = "none";
+    } else {
+      video.play(); // important for iOS
+      soundOff.style.display = "none";
+      soundOn.style.display = "inline";
+    }
+  });
+}
+
+
   /* ======================
      COUNTDOWN TIMER
      ====================== */
@@ -123,4 +123,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       block: "start"
     });
   });
+});
 });
