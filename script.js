@@ -50,37 +50,37 @@ const soundOn = document.getElementById("sound-on");
 
 if (video && unmuteBtn && soundOff && soundOn) {
 
-  // ✅ Force initial state (iPhone-safe)
+  // Initial state
   video.muted = true;
-  video.volume = 0;
-
   soundOff.style.display = "inline";
   soundOn.style.display = "none";
+
+  let audioUnlocked = false;
 
   unmuteBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    const soundIsOn = video.volume > 0;
+    // 🔑 First interaction: unlock audio
+    if (!audioUnlocked) {
+      video.play();        // required by iOS
+      audioUnlocked = true;
+    }
 
-    if (soundIsOn) {
-      // 🔇 Turn sound OFF (iOS + Chrome safe)
-      video.volume = 0;
-      video.muted = true;
+    // 🔊 Toggle sound ONLY (no pause)
+    video.muted = !video.muted;
 
+    if (video.muted) {
       soundOff.style.display = "inline";
       soundOn.style.display = "none";
     } else {
-      // 🔊 Turn sound ON
-      video.muted = false;
-      video.volume = 1;
-      video.play(); // REQUIRED for iPhone
-
       soundOff.style.display = "none";
       soundOn.style.display = "inline";
     }
   });
 }
+
+
 
 
 
