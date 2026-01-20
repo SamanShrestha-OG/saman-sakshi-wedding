@@ -2109,11 +2109,14 @@ body {
 }
 
 .ceremony-illustration img {
+  display: block;
   width: 100%;
-  max-height: 160px;
-  object-fit: contain;
+  max-width: 420px;   /* ⬅️ THIS IS THE KEY */
+  height: auto;
+  margin: 0 auto;
   opacity: 0.9;
 }
+
 /* Tighten spacing for Ceremony section only */
 #private-content .section-title {
   margin-bottom: 0.3rem; /* reduce big gap */
@@ -2122,10 +2125,7 @@ body {
   margin-top: 0;              /* remove extra top space */
   margin-bottom: 1rem;        /* small breathing room */
 }
-.ceremony-illustration img {
-  display: block;
-  margin: 0 auto;
-}
+
 .map-link {
   margin-top: 0.2rem;
   font-size: 0.75rem;          /* ⬅️ smaller */
