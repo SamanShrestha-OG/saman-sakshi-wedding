@@ -2143,3 +2143,23 @@ body {
 .map-link a:hover {
   opacity: 1;
 }
+/* 🔒 CEREMONY ILLUSTRATION — PNG SAFE */
+.ceremony-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 0.6rem auto;
+  padding: 0;
+}
+
+.ceremony-img {
+  display: block;
+
+  width: 100%;
+  max-width: 360px;   /* ⬅️ controls horizontal size */
+  height: auto;
+
+  max-height: 140px;  /* ⬅️ THIS FIXES THE GIANT GAP */
+  object-fit: contain;
+}
