@@ -2079,3 +2079,7 @@ body {
     gap: 1.6rem;
   }
 }
+/* 🔒 FORCE HIDDEN ELEMENTS — REQUIRED */
+.hidden {
+  display: none !important;
+}
