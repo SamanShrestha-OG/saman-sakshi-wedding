@@ -2083,3 +2083,11 @@ body {
 .hidden {
   display: none !important;
 }
+#private-content {
+  display: block;
+}
+
+/* 🔒 ABSOLUTE OVERRIDE — DESKTOP + MOBILE */
+#private-content.hidden {
+  display: none !important;
+}
