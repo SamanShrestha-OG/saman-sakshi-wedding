@@ -2091,3 +2091,55 @@ body {
 #private-content.hidden {
   display: none !important;
 }
+.section-subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--text-light);
+
+  margin-top: -1.2rem;   /* ⬅️ pulls date closer to title */
+  margin-bottom: 1.2rem;
+
+  text-align: center;
+}
+.ceremony-illustration {
+  max-width: 720px;
+  margin: 0 auto 1.2rem auto;
+  padding: 0 1rem;
+}
+
+.ceremony-illustration img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+/* Tighten spacing for Ceremony section only */
+#private-content .section-title {
+  margin-bottom: 0.3rem; /* reduce big gap */
+}
+.ceremony-illustration {
+  margin-top: 0;              /* remove extra top space */
+  margin-bottom: 1rem;        /* small breathing room */
+}
+.ceremony-illustration img {
+  display: block;
+  margin: 0 auto;
+}
+.map-link {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;          /* ⬅️ smaller */
+  letter-spacing: 0.1em;      /* ⬅️ tighter */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.map-link a {
+  color: var(--text-light);
+  text-decoration: none;
+  opacity: 0.85;              /* ⬅️ softer */
+}
+
+.map-link a:hover {
+  opacity: 1;
+}
