@@ -150,4 +150,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+/* ======================
+   🔒 SECRET LINK ACCESS
+   ====================== */
+
+const params = new URLSearchParams(window.location.search);
+const accessKey = params.get("access");
+
+const privateContent = document.getElementById("private-content");
+
+if (accessKey === "janti" && privateContent) {
+  privateContent.classList.remove("hidden");
+}
+
 });
